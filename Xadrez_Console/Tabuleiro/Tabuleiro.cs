@@ -19,6 +19,16 @@ namespace Tabuleiro
             pecas = new Peca[linhas, colunas];
         }
 
+        internal object peca(object i, object j)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object peca(object i, int j)
+        {
+            throw new NotImplementedException();
+        }
+
         public Peca peca(int linha, int coluna)
         {
             return pecas[linha, coluna];
