@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tabuleiro;
-using Xadrez;
 
-namespace Tabuleiro 
+namespace Xadrez
 {
     class PartidaDeXadrez
     {
-        public Tabuleiro tab { get; private set; }
+        public Tabuleiro.Tabuleiro tab { get; private set; }
         private int turno;
         private Cor jogadorAtual;
         public bool terminada { get; private set; }
 
         public PartidaDeXadrez()
         {
-            tab = new Tabuleiro(8, 8);
+            tab = new Tabuleiro.Tabuleiro(8, 8);
             turno = 1;
             jogadorAtual = Cor.Branca;
             terminada = false;

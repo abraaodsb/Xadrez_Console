@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tabuleiro
 {
-    class Tabuleiro
+    public class Tabuleiro
     {
         public int linhas { get; set; }
         public int colunas { get; set; }
