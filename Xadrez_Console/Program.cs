@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Tabuleiro;
 using Xadrez;
 
-namespace  Tabuleiro
+namespace Tabuleiro
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -24,6 +24,13 @@ namespace  Tabuleiro
                     Console.WriteLine();
                     Console.Write("Origem: ");
                     Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+
+
+                    bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
+
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
+                    Console.WriteLine();
                     Console.Write("Destino: ");
                     Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 

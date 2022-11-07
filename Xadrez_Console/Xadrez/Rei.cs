@@ -10,10 +10,11 @@ namespace Xadrez
     public class Rei : Peca
     {
 
-        public Rei(Tabuleiro.Tabuleiro tab, Cor cor) : base(tab, cor)
+        public Rei(Tabuleiro_ tab, Cor cor) : base(tab, cor)
         {
 
         }
+        
         public override string ToString()
         {
             return "R";
@@ -25,7 +26,7 @@ namespace Xadrez
             return p == null || p.cor != cor;
         }
 
-        public override bool[,] MovimentosPossiveis()
+        public override bool[,] movimentosPossiveis()
         {
             bool[,] mat = new bool[tab.linhas, tab.colunas];
 
@@ -93,7 +94,7 @@ namespace Xadrez
                 mat[pos.linha, pos.coluna] = true;
             }
             return mat;
-        }
+        }        
     }
 }
         
